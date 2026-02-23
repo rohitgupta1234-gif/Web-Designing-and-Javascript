@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+.Chessboard{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(8,1fr);
+    /* gap: 2px; */
+     /* justify-content: center;
+     place-items: center; */
+     height: 40rem;
+     aspect-ratio: 1;
+     margin-top: 1.2rem;
+    
+     
+     
+     
+}
+.board{
+    border: 2px solid black;
+    height: 5rem;
+    aspect-ratio: 1;
+    background-color: rgb(232, 207, 173);
+    display: grid;
+    place-items: center;
+
+}
+.board:nth-child(16n+1),
+.board:nth-child(16n+3),
+.board:nth-child(16n+5),
+.board:nth-child(16n+7),
+.board:nth-child(16n+10),
+.board:nth-child(16n+12),
+.board:nth-child(16n+14),
+.board:nth-child(16n+16){
+    background-color:  rgb(166, 93, 52);
+
+}
+
+.pawn-black i{
+    font-size: 3.5rem;   
+   
+     color: black;
+
+}
+.pawn-white i{
+    font-size: 3.5rem;  
+   
+     color:  white;
+
+}
+.rook-white i{
+     font-size: 3.5rem;   
+   
+     color:  white;
+}
+.rook-black i{
+    font-size: 3.5rem;  
+   
+     color: black;
+
+}
+.knight-black{
+    font-size: 3.5rem;  
+   
+     color: black;
+}
+.knight-white{
+    font-size: 3.5rem;   
+   
+     color:  white;
+}
+.black{
+     font-size: 3.5rem;   
+   
+     color: black;
+}
+.white{
+    font-size: 3.5rem;  
+   
+     color:  white;
+}
+i:hover{
+    
+   box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
+}
+body{
+    background: #3e2723;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+
+.fullpart{
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+    align-items: center;
+    gap: 20rem;
+}
+.play-btn{
+    display: inline-flex;
+    align-items: center;
+    
+    text-decoration: none;
+    background: #d4af37;
+    color: black;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 2rem;
+    font-weight: bold;
+
+
+  
+}
+.play-btn:hover{
+
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}
+.longterm{
+    margin: 0.2rem;
+}
+ 
+
+@media (max-width: 1024px) {
+    .fullpart{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    body{
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    .Chessboard{
+        height: 30rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .Chessboard{
+        height: 22rem;
+    }
+
+    .board{
+        height: auto;
+    }
+
+    .play-btn{
+        font-size: 1.5rem;
+        padding: 10px 20px;
+    }
+
+    .pawn-black i,
+    .pawn-white i,
+    .rook-white i,
+    .rook-black i,
+    .knight-black,
+    .knight-white,
+    .black,
+    .white{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .Chessboard{
+        height: 18rem;
+    }
+
+    .play-btn{
+        font-size: 1.2rem;
+        padding: 8px 16px;
+    }
+}
