@@ -69,11 +69,11 @@ function App() {
 
       <div className="student-info">
 
-        <h3>Rohit Gupta</h3>
+        <h3>Shivam Kumar Srivastava</h3>
 
         <h4>Class: CSE-26</h4>
 
-        <h4>Admission No: 2025B01010842</h4>
+        <h4>Admission No: 2025B01010946</h4>
 
       </div>
 
